@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #121a26;
+  --indigo: #1c3557;
+  --indigo-2: #26487a;
+  --turmeric: #d98e04;
+  --turmeric-press: #c78203; /* turmeric darkened 8%, button press only */
+  --paper: #fbfaf8;
+  --mist: #e9ece7;
+  --slate: #5a6472;
+  --line: #d4d8d2;
+  --white: #ffffff;
+
+  --shadow-float: 0 8px 24px -12px rgb(18 26 38 / 0.28);
+  --section-y: clamp(3rem, 8vw, 6rem);
+  --header-h: 4rem;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-indigo: var(--indigo);
+  --color-indigo-2: var(--indigo-2);
+  --color-turmeric: var(--turmeric);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-slate: var(--slate);
+  --color-line: var(--line);
+
+  --font-sans: var(--font-archivo), var(--font-indic, ui-sans-serif), system-ui, sans-serif;
+  --shadow-float: var(--shadow-float);
+  --breakpoint-xs: 26rem;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+  }
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1.05;
+  }
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.12;
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  /* Indic scripts need more room above and below the line. */
+  :lang(kn) h1,
+  :lang(hi) h1 {
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  :lang(kn) h2,
+  :lang(hi) h2,
+  :lang(kn) h3,
+  :lang(hi) h3 {
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+  :lang(kn) body,
+  :lang(hi) body {
+    line-height: 1.75;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    color: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid var(--turmeric);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: calc(1200px + 2 * 1.25rem);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .wrap {
+      padding-inline: 1.5rem;
+      max-width: calc(1200px + 3rem);
+    }
+  }
+  .section {
+    padding-block: var(--section-y);
+  }
+  .measure {
+    max-width: 68ch;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Buttons. Press darkens 8%, nothing lifts or scales. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 120ms ease-out, border-color 120ms ease-out, color 120ms ease-out;
+  }
+  .btn-primary {
+    background: var(--turmeric);
+    color: var(--ink);
+  }
+  .btn-primary:hover {
+    background: color-mix(in srgb, var(--turmeric) 94%, var(--ink));
+  }
+  .btn-primary:active {
+    background: var(--turmeric-press);
+  }
+  .btn-outline {
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn-outline:hover {
+    background: var(--mist);
+  }
+  .btn-outline:active {
+    background: color-mix(in srgb, var(--mist) 92%, var(--ink));
+  }
+  .on-dark .btn-outline {
+    border-color: var(--paper);
+    color: var(--paper);
+  }
+  .on-dark .btn-outline:hover {
+    background: var(--indigo-2);
+  }
+
+  .link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+  .link:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .sr-only-focusable:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* ---------- Season bar ---------- */
+
+.season {
+  --bar-h: 0.875rem;
+}
+.season-track {
+  display: flex;
+  gap: 3px;
+  height: var(--bar-h);
+}
+.season-seg {
+  position: relative;
+  flex-grow: var(--m);
+  flex-basis: 0;
+  background: var(--mist);
+  overflow: hidden;
+}
+.season-seg:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.season-seg:last-child {
+  border-radius: 0 3px 3px 0;
+}
+.season-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--indigo);
+  transform-origin: left center;
+}
+.season-seg[data-active] .season-fill {
+  background: var(--turmeric);
+}
+.season-now {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+}
+.season-now > span {
+  flex-grow: var(--m);
+  flex-basis: 0;
+  min-width: 0;
+}
+.season-labels {
+  display: flex;
+  gap: 3px;
+  margin-top: 0.6rem;
+}
+.season-label {
+  flex-grow: var(--m);
+  flex-basis: 0;
+  min-width: 0;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: var(--slate);
+}
+.season-label b {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+/* Narrow screens: alternate labels between two rows so each gets room. */
+@media (max-width: 40rem) {
+  .season-labels {
+    padding-bottom: 2.6rem;
+  }
+  .season-label:nth-child(even) {
+    transform: translateY(2.6rem);
+  }
+  .season-label b {
+    white-space: normal;
+    width: max-content;
+    max-width: 8.5rem;
+  }
+}
+
+/* The one signature moment: the hero bar draws itself, once. */
+.season[data-draw="load"] .season-fill {
+  animation: season-draw 200ms cubic-bezier(0.3, 0.7, 0.4, 1) both;
+  animation-delay: calc(var(--i) * 175ms + 150ms);
+}
+.season[data-draw="load"] .season-label {
+  animation: season-label 260ms ease-out both;
+  animation-delay: calc(var(--i) * 175ms + 260ms);
+}
+.season[data-draw="load"] .season-now {
+  animation: season-label 260ms ease-out 1000ms both;
+}
+/* Scroll variant: waits until the bar enters view. */
+.season[data-draw="view"] .season-fill {
+  transform: scaleX(0);
+}
+.season[data-draw="view"][data-inview] .season-fill {
+  animation: season-draw 200ms cubic-bezier(0.3, 0.7, 0.4, 1) both;
+  animation-delay: calc(var(--i) * 150ms);
+}
+@keyframes season-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes season-label {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  transition: background-color 200ms ease-out;
+}
+.site-header[data-scrolled] {
+  background: color-mix(in srgb, var(--paper) 86%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+}
+
+main[data-leaving] {
+  opacity: 0.35;
+  transition: opacity 150ms ease-out;
+}
+
+/* ---------- Crop rail ---------- */
+
+.crop-rail {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1.25rem;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.crop-rail::-webkit-scrollbar {
+  display: none;
+}
+.crop-rail > * {
+  scroll-snap-align: start;
+}
+
+/* ---------- Images ---------- */
+
+.img-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--mist);
+}
+.img-frame img {
+  animation: img-in 200ms ease-out both;
+}
+@keyframes img-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ---------- Long-form prose ---------- */
+
+.prose-hg {
+  max-width: 68ch;
+}
+.prose-hg h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.prose-hg h2:first-child {
+  margin-top: 0;
+}
+.prose-hg h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.prose-hg p + p {
+  margin-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transition-property: opacity !important;
+  }
+  .season[data-draw="view"] .season-fill {
+    transform: none;
+  }
+}
