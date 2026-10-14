@@ -5,6 +5,8 @@ const en = {
       "Season-long WhatsApp crop advisory for ginger, turmeric, arecanut, banana and pepper growers in Karnataka. From ₹10,000 per acre. Calls from ₹250.",
   },
   shell: {
+    breadcrumb: "Breadcrumb",
+    homeCrumb: "Home",
     skip: "Skip to content",
     home: "Horti Guru home",
     menu: "Menu",

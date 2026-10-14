@@ -36,3 +36,14 @@ export function isFilled(value: string) {
 export function digits(value: string) {
   return isFilled(value) ? value.replace(/\D/g, "") : "";
 }
+
+/** Numbered testimonial slots, 1 to 12. */
+export function testimonial(n: number) {
+  return {
+    quote: `[TESTIMONIAL_${n}_QUOTE]`,
+    name: `[TESTIMONIAL_${n}_NAME]`,
+    district: `[TESTIMONIAL_${n}_DISTRICT]`,
+    crop: `[TESTIMONIAL_${n}_CROP]`,
+    acres: `[TESTIMONIAL_${n}_ACRES]`,
+  };
+}

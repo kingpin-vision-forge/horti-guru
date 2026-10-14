@@ -63,3 +63,58 @@ export function breadcrumbNode(lang: Locale, trail: { name: string; path: string
 export function graph(nodes: Node[]) {
   return { "@context": "https://schema.org", "@graph": nodes };
 }
+
+export function serviceNode({
+  lang,
+  path,
+  name,
+  serviceType,
+  description,
+  price,
+  unitText,
+}: {
+  lang: Locale;
+  path: string;
+  name: string;
+  serviceType: string;
+  description: string;
+  price?: number | null;
+  unitText?: string;
+}): Node {
+  const node: Node = {
+    "@type": "Service",
+    "@id": `${url(lang, path)}#service`,
+    name,
+    serviceType,
+    description,
+    provider: { "@id": ORG_ID },
+    areaServed: [
+      { "@type": "State", name: "Karnataka" },
+      { "@type": "Country", name: "India" },
+    ],
+    url: url(lang, path),
+  };
+  if (price) {
+    node.offers = {
+      "@type": "Offer",
+      price: String(price),
+      priceCurrency: "INR",
+      url: url(lang, path),
+      ...(unitText
+        ? { priceSpecification: { "@type": "UnitPriceSpecification", price: String(price), priceCurrency: "INR", unitText } }
+        : {}),
+    };
+  }
+  return node;
+}
+
+export function faqNode(faqs: { q: string; a: string }[]): Node {
+  return {
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}

@@ -374,3 +374,23 @@ main[data-leaving] {
     transform: none;
   }
 }
+
+/* ---------- Accordion and small cross-fades ---------- */
+
+.accordion-panel:not([hidden]) {
+  animation: panel-in 240ms ease-out both;
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+.swap {
+  animation: swap-in 180ms ease-out both;
+}
+@keyframes swap-in {
+  from {
+    opacity: 0;
+  }
+}
