@@ -118,3 +118,46 @@ export function faqNode(faqs: { q: string; a: string }[]): Node {
     })),
   };
 }
+
+/** One Service with a priced catalogue of sub-services (consultancy, lab tests). */
+export function catalogServiceNode({
+  lang,
+  path,
+  name,
+  serviceType,
+  description,
+  items,
+}: {
+  lang: Locale;
+  path: string;
+  name: string;
+  serviceType: string;
+  description: string;
+  items: { name: string; price: number | null }[];
+}): Node {
+  return {
+    "@type": "Service",
+    "@id": `${url(lang, path)}#service`,
+    name,
+    serviceType,
+    description,
+    provider: { "@id": ORG_ID },
+    areaServed: [
+      { "@type": "State", name: "Karnataka" },
+      { "@type": "Country", name: "India" },
+    ],
+    url: url(lang, path),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name,
+      itemListElement: items
+        .filter((i) => i.price)
+        .map((i) => ({
+          "@type": "Offer",
+          price: String(i.price),
+          priceCurrency: "INR",
+          itemOffered: { "@type": "Service", name: i.name },
+        })),
+    },
+  };
+}

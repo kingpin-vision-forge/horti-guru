@@ -91,4 +91,16 @@ export const images = {
       hi: "बेल पर काली मिर्च के हरे गुच्छे",
     },
   },
+  spraying: {
+    token: "IMG_SPRAYING",
+    src: unsplash("photo-1709532388333-acf472eae61a", "4:3"),
+    source: "https://unsplash.com/photos/gVU-wYT8no8",
+    width: 800,
+    height: 600,
+    alt: {
+      en: "A grower spraying a crop in the field",
+      kn: "ಹೊಲದಲ್ಲಿ ಬೆಳೆಗೆ ಸಿಂಪಡಣೆ ಮಾಡುತ್ತಿರುವ ಬೆಳೆಗಾರ್ತಿ",
+      hi: "खेत में फ़सल पर छिड़काव करती एक उत्पादक",
+    },
+  },
 } satisfies Record<string, Photo>;

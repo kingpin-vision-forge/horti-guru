@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
 export type AccordionItem = {
   id: string;
@@ -27,6 +27,12 @@ export function Accordion({
   const base = useId();
   const H = `h${headingLevel}` as "h2" | "h3";
 
+  // Open the row a link points at, e.g. /consultancy#nutrient.
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash && items.some((i) => i.id === hash)) setOpen(hash);
+  }, [items]);
+
   return (
     <div className="border-b border-line">
       {items.map((item) => {
@@ -34,7 +40,7 @@ export function Accordion({
         const btn = `${base}-${item.id}-b`;
         const panel = `${base}-${item.id}-p`;
         return (
-          <div key={item.id} className="border-t border-line">
+          <div key={item.id} id={item.id} className="scroll-mt-24 border-t border-line">
             <H className="text-base font-normal tracking-normal">
               <button
                 id={btn}
