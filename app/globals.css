@@ -425,3 +425,14 @@ main[data-leaving] {
   align-items: flex-end;
   text-align: right;
 }
+
+/* Checkout steps slide 16px and fade. */
+.step-in {
+  animation: step-in 200ms ease-out both;
+}
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
