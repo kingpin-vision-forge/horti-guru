@@ -35,7 +35,7 @@ export type ConsultancyContent = {
 const travelEn = "Travel and accommodation charged separately.";
 
 const en: ConsultancyContent = {
-  title: "Agriculture Consultant in Karnataka, from ₹250 | Horti Guru",
+  title: "Agriculture Consultant, Karnataka | Horti Guru",
   description:
     "Horticulture consultancy in Karnataka: ₹250 calls, irrigation and nutrient scheduling, ₹5,000 field visits by an agronomist and ₹10,000 crop planning reports.",
   crumb: "Consultancy",

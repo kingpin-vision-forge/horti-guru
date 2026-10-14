@@ -23,7 +23,7 @@ export type EquipmentContent = {
 };
 
 const en: EquipmentContent = {
-  title: "Kisan Kavach, Soil Meters and Seed Treatment Kits | Horti Guru",
+  title: "Kisan Kavach and Soil Meters | Horti Guru",
   description:
     "Kisan Kavach anti-pesticide suit at ₹4,000 including GST, plus pH meters, EC meters, soil moisture probes and ginger and turmeric seed treatment kits.",
   crumb: "Equipment",

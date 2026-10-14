@@ -12,7 +12,7 @@ const ginger: CropData = {
   siblings: ["turmeric", "pepper"],
   copy: {
     en: {
-      title: "Ginger Crop Advisory and Cultivation in Karnataka | Horti Guru",
+      title: "Ginger Crop Advisory in Karnataka | Horti Guru",
       description:
         "Ginger cultivation advice for Karnataka growers: crop calendar, soft rot and bacterial wilt management, seed and soil testing, and season-long WhatsApp advisory.",
       h1: "Ginger advisory and crop management in Karnataka",

@@ -12,7 +12,7 @@ const arecanut: CropData = {
   siblings: ["pepper", "banana"],
   copy: {
     en: {
-      title: "Arecanut Crop Advisory and Disease Management, Karnataka | Horti Guru",
+      title: "Arecanut Advisory and Disease Control | Horti Guru",
       description:
         "Arecanut garden advice for Karnataka: a year-round calendar, fruit rot (koleroga) protection, yellow leaf and foot rot management, soil testing and WhatsApp advisory.",
       h1: "Arecanut advisory and crop management in Karnataka",

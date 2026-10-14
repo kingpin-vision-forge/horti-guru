@@ -111,7 +111,8 @@ export function serviceNode({
 export function faqNode(faqs: { q: string; a: string }[]): Node {
   return {
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
+    // Answers that still contain an unfilled [TOKEN] are left out of structured data.
+    mainEntity: faqs.filter((f) => !/\[[A-Z_]+\]/.test(f.a)).map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },

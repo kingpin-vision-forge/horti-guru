@@ -12,7 +12,7 @@ const banana: CropData = {
   siblings: ["arecanut", "turmeric"],
   copy: {
     en: {
-      title: "Banana Crop Advisory and Fertigation, Karnataka | Horti Guru",
+      title: "Banana Crop Advisory in Karnataka | Horti Guru",
       description:
         "Banana cultivation advice for Karnataka growers: crop calendar, fertigation and irrigation scheduling, Sigatoka and wilt management, soil and water testing.",
       h1: "Banana advisory and crop management in Karnataka",

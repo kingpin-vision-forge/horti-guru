@@ -12,7 +12,7 @@ const turmeric: CropData = {
   siblings: ["ginger", "banana"],
   copy: {
     en: {
-      title: "Turmeric Crop Advisory and Cultivation in Karnataka | Horti Guru",
+      title: "Turmeric Crop Advisory in Karnataka | Horti Guru",
       description:
         "Turmeric cultivation advice for Karnataka growers: crop calendar, rhizome rot and leaf blotch control, curing after harvest, soil testing and WhatsApp advisory.",
       h1: "Turmeric advisory and crop management in Karnataka",

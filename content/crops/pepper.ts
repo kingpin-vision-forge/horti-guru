@@ -12,7 +12,7 @@ const pepper: CropData = {
   siblings: ["arecanut", "ginger"],
   copy: {
     en: {
-      title: "Black Pepper Crop Advisory and Quick Wilt Control, Karnataka | Horti Guru",
+      title: "Black Pepper Advisory in Karnataka | Horti Guru",
       description:
         "Black pepper garden advice for Karnataka: a year-round calendar, quick wilt and slow decline management, pollu control, soil testing and WhatsApp advisory.",
       h1: "Black pepper advisory and crop management in Karnataka",
