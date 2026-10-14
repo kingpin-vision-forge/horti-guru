@@ -47,3 +47,13 @@ export function testimonial(n: number) {
     acres: `[TESTIMONIAL_${n}_ACRES]`,
   };
 }
+
+/** Team slots, 1 to 3. */
+export function expert(n: number) {
+  return {
+    name: `[EXPERT_${n}_NAME]`,
+    qualification: `[EXPERT_${n}_QUALIFICATION]`,
+    specialisation: `[EXPERT_${n}_SPECIALISATION]`,
+    years: `[EXPERT_${n}_YEARS]`,
+  };
+}

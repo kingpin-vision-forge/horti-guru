@@ -103,4 +103,15 @@ export const images = {
       hi: "खेत में फ़सल पर छिड़काव करती एक उत्पादक",
     },
   },
+  premises: {
+    token: "IMG_PREMISES",
+    src: null,
+    width: 800,
+    height: 600,
+    alt: {
+      en: "The Horti Guru office and laboratory",
+      kn: "Horti Guru ಕಚೇರಿ ಮತ್ತು ಪ್ರಯೋಗಾಲಯ",
+      hi: "Horti Guru का दफ़्तर और प्रयोगशाला",
+    },
+  },
 } satisfies Record<string, Photo>;
