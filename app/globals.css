@@ -243,19 +243,41 @@
   color: var(--ink);
   white-space: nowrap;
 }
-/* Narrow screens: alternate labels between two rows so each gets room. */
+/* Narrow screens: stage labels become a list under the bar. */
+.season-legend {
+  display: none;
+}
 @media (max-width: 40rem) {
-  .season-labels {
-    padding-bottom: 2.6rem;
+  .season-labels,
+  .season-now {
+    display: none;
   }
-  .season-label:nth-child(even) {
-    transform: translateY(2.6rem);
+  .season-legend {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
   }
-  .season-label b {
-    white-space: normal;
-    width: max-content;
-    max-width: 8.5rem;
-  }
+}
+.season-legend li {
+  display: grid;
+  grid-template-columns: 0.75rem 1fr auto;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+.season-legend i {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 2px;
+  background: var(--indigo);
+  transform: translateY(1px);
+}
+.season-legend li[data-active] i {
+  background: var(--turmeric);
+}
+.season-legend li[data-active] b {
+  font-weight: 700;
 }
 
 /* The one signature moment: the hero bar draws itself, once. */
@@ -263,7 +285,8 @@
   animation: season-draw 200ms cubic-bezier(0.3, 0.7, 0.4, 1) both;
   animation-delay: calc(var(--i) * 175ms + 150ms);
 }
-.season[data-draw="load"] .season-label {
+.season[data-draw="load"] .season-label,
+.season[data-draw="load"] .season-legend li {
   animation: season-label 260ms ease-out both;
   animation-delay: calc(var(--i) * 175ms + 260ms);
 }
@@ -393,4 +416,12 @@ main[data-leaving] {
   from {
     opacity: 0;
   }
+}
+
+/* The last stage label hugs the right edge so it never runs off the bar. */
+.season-label:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
 }

@@ -65,6 +65,18 @@ export function SeasonBar({ lang, stages, caption, active, activeLabel, draw = "
           </span>
         ))}
       </div>
+      <ol className="season-legend" aria-hidden="true">
+        {stages.map((s, i) => (
+          <li key={s.label} data-active={i === active ? "" : undefined} style={{ "--i": i } as React.CSSProperties}>
+            <i aria-hidden="true" />
+            <b className="font-semibold">
+              {s.label}
+              {i === active && activeLabel && <span className="block text-sm font-normal text-slate">{activeLabel}</span>}
+            </b>
+            <span className="num text-slate">{range(lang, s)}</span>
+          </li>
+        ))}
+      </ol>
       <p className="mt-3 text-sm text-slate">{caption}</p>
     </>
   );
