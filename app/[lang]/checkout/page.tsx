@@ -55,7 +55,8 @@ export default async function CheckoutPage({ params }: Props) {
       <div className="wrap pt-4 pb-[var(--section-y)]">
         <Breadcrumb lang={lang} trail={trail} label={t.shell.breadcrumb} />
         <h1 className="sr-only">{c.h1}</h1>
-        <div className="mt-8 sm:mt-12">
+        {/* Reserve the stepper's height so the footer does not jump when it mounts. */}
+        <div className="mt-8 min-h-[44rem] sm:mt-12">
           <Suspense>
             <Checkout
               t={c}

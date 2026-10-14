@@ -10,7 +10,7 @@ const hi: Dict = {
     breadcrumb: "पेज का रास्ता",
     homeCrumb: "होम",
     skip: "मुख्य सामग्री पर जाएँ",
-    home: "Horti Guru होम",
+    home: "HortiGuru होम",
     menu: "मेनू",
     close: "मेनू बंद करें",
     language: "भाषा",

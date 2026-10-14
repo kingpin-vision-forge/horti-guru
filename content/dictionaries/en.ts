@@ -8,7 +8,7 @@ const en = {
     breadcrumb: "Breadcrumb",
     homeCrumb: "Home",
     skip: "Skip to content",
-    home: "Horti Guru home",
+    home: "HortiGuru home",
     menu: "Menu",
     close: "Close menu",
     language: "Language",

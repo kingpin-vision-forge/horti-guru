@@ -10,7 +10,7 @@ const kn: Dict = {
     breadcrumb: "ಪುಟದ ದಾರಿ",
     homeCrumb: "ಮುಖಪುಟ",
     skip: "ಮುಖ್ಯ ವಿಷಯಕ್ಕೆ ಹೋಗಿ",
-    home: "Horti Guru ಮುಖಪುಟ",
+    home: "HortiGuru ಮುಖಪುಟ",
     menu: "ಮೆನು",
     close: "ಮೆನು ಮುಚ್ಚಿ",
     language: "ಭಾಷೆ",
