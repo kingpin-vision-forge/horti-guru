@@ -105,13 +105,15 @@ export const images = {
   },
   premises: {
     token: "IMG_PREMISES",
-    src: null,
+    // Stand-in until the business sends a photo of its own office or lab.
+    src: unsplash("photo-1642952273588-ed6fa28870ac", "4:3"),
+    source: "https://unsplash.com/photos/bQ9y93kdk4c",
     width: 800,
     height: 600,
     alt: {
-      en: "The Horti Guru office and laboratory",
-      kn: "Horti Guru ಕಚೇರಿ ಮತ್ತು ಪ್ರಯೋಗಾಲಯ",
-      hi: "Horti Guru का दफ़्तर और प्रयोगशाला",
+      en: "A handful of field soil, ready for testing",
+      kn: "ಪರೀಕ್ಷೆಗೆ ಸಿದ್ಧವಾದ ಹೊಲದ ಒಂದು ಹಿಡಿ ಮಣ್ಣು",
+      hi: "जाँच के लिए तैयार खेत की मुट्ठी भर मिट्टी",
     },
   },
 } satisfies Record<string, Photo>;
