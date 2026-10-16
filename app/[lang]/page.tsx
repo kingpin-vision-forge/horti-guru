@@ -94,11 +94,16 @@ export default async function Home({ params }: Props) {
           <h2 id="problem" className="sr-only">
             {h.problemHeading}
           </h2>
-          <div className="max-w-[30ch] space-y-5 text-[clamp(1.375rem,3.6vw,2.125rem)] leading-[1.3] tracking-[-0.015em] text-ink/80 sm:space-y-6">
-            {h.problems.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-            <p className="pt-3 font-semibold text-ink">{h.problemAnswer}</p>
+          {/* Desktop: the answer sits opposite the problems instead of under them. */}
+          <div className="text-[clamp(1.375rem,3.6vw,2.125rem)] leading-[1.3] tracking-[-0.015em] lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-end lg:gap-12">
+            <div className="max-w-[30ch] space-y-5 text-ink/80 sm:space-y-6">
+              {h.problems.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+            <p className="mt-5 max-w-[30ch] pt-3 font-semibold text-ink sm:mt-6 lg:mt-0 lg:border-l-4 lg:border-turmeric lg:pt-0 lg:pl-6">
+              {h.problemAnswer}
+            </p>
           </div>
         </div>
       </section>

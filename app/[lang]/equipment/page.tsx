@@ -135,9 +135,9 @@ export default async function EquipmentPage({ params }: Props) {
       </section>
 
       <section aria-labelledby="faq" className="section">
-        <div className="wrap">
+        <div className="wrap split">
           <h2 id="faq">{c.faqHeading}</h2>
-          <div className="mt-8 max-w-[68ch]">
+          <div className="mt-8 max-w-[68ch] lg:mt-0">
             <Accordion
               items={c.faqs.map((f, i) => ({
                 id: `faq-${i}`,

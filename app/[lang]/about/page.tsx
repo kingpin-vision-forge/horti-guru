@@ -36,9 +36,9 @@ export default async function AboutPage({ params }: Props) {
       <JsonLd data={graph([...siteNodes(lang), breadcrumbNode(lang, trail)])} />
       <PageHeader lang={lang} trail={trail} breadcrumbLabel={t.shell.breadcrumb} h1={c.h1} />
 
-      <section aria-labelledby="why" className="wrap pb-[var(--section-y)]">
+      <section aria-labelledby="why" className="wrap split pb-[var(--section-y)]">
         <h2 id="why">{c.whyHeading}</h2>
-        <div className="mt-6 max-w-[62ch] space-y-5 text-lg leading-relaxed">
+        <div className="mt-6 max-w-[62ch] space-y-5 text-lg leading-relaxed lg:mt-0">
           {c.why.map((p) => (
             <p key={p}>{p}</p>
           ))}

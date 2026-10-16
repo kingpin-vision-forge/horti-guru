@@ -115,6 +115,22 @@
   .measure {
     max-width: 68ch;
   }
+  /* Heading beside content on desktop, stacked on phones. */
+  @media (min-width: 64rem) {
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      column-gap: 3rem;
+      align-items: start;
+    }
+    .split > h2 {
+      position: sticky;
+      top: calc(var(--header-h) + 2rem);
+    }
+    .split > :nth-child(n + 2) {
+      grid-column: 2;
+    }
+  }
   .num {
     font-variant-numeric: tabular-nums;
   }
@@ -367,15 +383,44 @@ main[data-leaving] {
 
 /* ---------- Long-form prose ---------- */
 
+/* Phones read straight down. Desktop hangs each h2 in a left column beside
+   its text, so a 68ch measure does not leave half the screen empty. */
 .prose-hg {
   max-width: 68ch;
 }
-.prose-hg h2 {
+.prose-sec + .prose-sec {
   margin-top: 3rem;
+}
+.prose-hg h2 {
   margin-bottom: 1rem;
 }
-.prose-hg h2:first-child {
+.prose-sec > :first-child > :first-child {
   margin-top: 0;
+}
+@media (min-width: 64rem) {
+  .prose-hg {
+    max-width: none;
+  }
+  .prose-sec {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 3rem;
+    align-items: start;
+  }
+  .prose-sec + .prose-sec {
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+  .prose-sec > h2 {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+    margin-bottom: 0;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+  }
+  .prose-body {
+    grid-column: 2;
+    max-width: 68ch;
+  }
 }
 .prose-hg h3 {
   margin-top: 2rem;
