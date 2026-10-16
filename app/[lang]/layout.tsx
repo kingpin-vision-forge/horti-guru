@@ -26,8 +26,8 @@ const devanagari = Noto_Sans_Devanagari({
 
 const indicFont: Record<Locale, string> = { en: "", kn: kannada.variable, hi: devanagari.variable };
 
-export const dynamicParams = false;
-
+// Unknown locales are rejected below with notFound(). dynamicParams stays on so
+// a host whose prerender cache misses renders the page instead of returning 404.
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }

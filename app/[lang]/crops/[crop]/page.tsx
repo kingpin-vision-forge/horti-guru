@@ -24,7 +24,6 @@ import { stageForMonth } from "@/lib/season";
 
 // The calendar marks the current stage, so refresh daily.
 export const revalidate = 86400;
-export const dynamicParams = false;
 
 type Props = { params: Promise<{ lang: Locale; crop: string }> };
 
