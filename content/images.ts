@@ -33,14 +33,13 @@ export const images = {
   },
   ginger: {
     token: "IMG_CROP_GINGER",
-    src: unsplash("photo-1769795082196-aa8c3e7c63eb", "3:4"),
-    source: "https://unsplash.com/photos/U7z6nBT_1YU",
-    width: 600,
-    height: 800,
+    src: "/img/ginger-field.webp",
+    width: 900,
+    height: 1200,
     alt: {
-      en: "Ginger plant in flower among green leaves",
-      kn: "ಹಸಿರು ಎಲೆಗಳ ನಡುವೆ ಹೂಬಿಟ್ಟ ಶುಂಠಿ ಗಿಡ",
-      hi: "हरी पत्तियों के बीच फूल वाला अदरक का पौधा",
+      en: "Healthy ginger rows growing under sprinkler irrigation",
+      kn: "ತುಂತುರು ನೀರಾವರಿಯಲ್ಲಿ ಬೆಳೆಯುತ್ತಿರುವ ಆರೋಗ್ಯಕರ ಶುಂಠಿ ಸಾಲುಗಳು",
+      hi: "स्प्रिंकलर सिंचाई में उगती स्वस्थ अदरक की कतारें",
     },
   },
   turmeric: {

@@ -110,15 +110,46 @@ export default async function CropPage({ params }: Props) {
       <section aria-labelledby="calendar" className="section">
         <div className="wrap">
           <h2 id="calendar">{tpl.calendarHeading}</h2>
-          <SeasonBar
-            lang={lang}
-            stages={stages}
-            active={active}
-            activeLabel={active === undefined ? undefined : tpl.calendarNow}
-            caption={c.seasonCaption}
-            draw="view"
-            className="mt-10 max-w-4xl"
-          />
+          {c.regionalSchedule ? (
+            <div className="mt-8 max-w-5xl">
+              <p className="max-w-[62ch] text-slate">{c.regionalSchedule.intro}</p>
+              <div className="mt-6 overflow-x-auto border-y border-ink/80">
+                <table className="w-full min-w-[42rem] text-left">
+                  <thead>
+                    <tr className="border-b border-line text-sm text-slate">
+                      <th scope="col" className="px-4 py-3 font-medium sm:first:pl-0">{c.regionalSchedule.regionLabel}</th>
+                      <th scope="col" className="px-4 py-3 font-medium">{c.regionalSchedule.landPreparationLabel}</th>
+                      <th scope="col" className="px-4 py-3 font-medium">{c.regionalSchedule.plantingLabel}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {c.regionalSchedule.rows.map((row) => (
+                      <tr key={row.region} className="border-b border-line last:border-b-0">
+                        <th scope="row" className="px-4 py-4 font-semibold sm:first:pl-0">{row.region}</th>
+                        <td className="num px-4 py-4">{row.landPreparation}</td>
+                        <td className="num px-4 py-4">{row.planting}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-5 grid gap-3 text-sm sm:grid-cols-2 sm:text-base">
+                <p className="font-semibold">{c.regionalSchedule.sprouting}</p>
+                <p className="text-slate">{c.regionalSchedule.harvest}</p>
+              </div>
+              <p className="mt-4 text-sm text-slate">{c.seasonCaption}</p>
+            </div>
+          ) : (
+            <SeasonBar
+              lang={lang}
+              stages={stages}
+              active={active}
+              activeLabel={active === undefined ? undefined : tpl.calendarNow}
+              caption={c.seasonCaption}
+              draw="view"
+              className="mt-10 max-w-4xl"
+            />
+          )}
         </div>
       </section>
 
@@ -145,6 +176,31 @@ export default async function CropPage({ params }: Props) {
           </dl>
         </div>
       </section>
+
+      {c.successStory && (
+        <section aria-labelledby="success-story" className="section border-t border-line">
+          <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-16">
+            <div>
+              <h2 id="success-story">{c.successStory.heading}</h2>
+              <blockquote className="mt-7 max-w-[65ch] text-lg leading-relaxed">
+                <p>“{c.successStory.quote}”</p>
+              </blockquote>
+              <p className="mt-5 text-sm text-slate">
+                <span className="block font-semibold text-ink">{c.successStory.name}</span>
+                {c.successStory.meta}
+              </p>
+            </div>
+            <dl className="border-t border-ink/80">
+              {c.successStory.metrics.map((metric) => (
+                <div key={metric.label} className="flex items-baseline justify-between gap-6 border-b border-line py-4">
+                  <dt className="text-sm text-slate">{metric.label}</dt>
+                  <dd className="num text-right text-xl font-bold">{metric.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
 
       {/* Problems */}
       <section aria-labelledby="problems" className="section">

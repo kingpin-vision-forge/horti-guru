@@ -9,6 +9,22 @@ export type CropCopy = {
   /** Stage labels, same order as `calendar`. */
   stages: string[];
   seasonCaption: string;
+  regionalSchedule?: {
+    intro: string;
+    regionLabel: string;
+    landPreparationLabel: string;
+    plantingLabel: string;
+    rows: { region: string; landPreparation: string; planting: string }[];
+    sprouting: string;
+    harvest: string;
+  };
+  successStory?: {
+    heading: string;
+    quote: string;
+    name: string;
+    meta: string;
+    metrics: { label: string; value: string }[];
+  };
   facts: { planting: string; duration: string; districts: string; spacing: string };
   problems: { name: string; body: string }[];
   helps: string[];

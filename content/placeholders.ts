@@ -26,11 +26,11 @@ export const P = {
   LAB_TURNAROUND: "7 working days",
 
   TESTIMONIAL_FEATURED_QUOTE:
-    "Last year rhizome rot took almost half my ginger. This season the team caught it in the first week from a WhatsApp photo, and I harvested the full field.",
-  TESTIMONIAL_FEATURED_NAME: "Ramesh Gowda",
-  TESTIMONIAL_FEATURED_DISTRICT: "Hassan",
+    "The soil report analysis, fertilizer schedules and recommendations played a very important role throughout my crop cycle. I followed the recommended fertilizer rounds and successfully grew and sold 720 bags of ginger from 62 guntas.",
+  TESTIMONIAL_FEATURED_NAME: "Nandish",
+  TESTIMONIAL_FEATURED_DISTRICT: "Karnataka",
   TESTIMONIAL_FEATURED_CROP: "Ginger",
-  TESTIMONIAL_FEATURED_ACRES: "3",
+  TESTIMONIAL_FEATURED_ACRES: "1.55",
 
   // Legal pages: substituted into content/pages/legal.ts by LegalPage.
   LEGAL_ENTITY: "Horti Guru Agri Services Pvt. Ltd.",
@@ -56,7 +56,7 @@ type Testimonial = { quote: string; name: string; district: string; crop: string
 /** Results page slots. Each slot's crop is set in content/pages/company.ts (resultSlots). */
 const testimonials: Testimonial[] = [
   // 1 ginger
-  { quote: "They told me exactly when to stop irrigating before harvest. My rhizomes came out firm and the trader paid the top rate.", name: "Manjunath K.", district: "Hassan", crop: "Ginger", acres: "4" },
+  { quote: "The soil report analysis, fertilizer schedules and recommendations played a very important role throughout my crop cycle. I followed the recommended fertilizer rounds and successfully grew and sold 720 bags of ginger from 62 guntas. I am sincerely grateful to Harish Sir and the entire team for their guidance and support.", name: "Nandish", district: "Karnataka", crop: "Ginger", acres: "1.55" },
   // 2 arecanut
   { quote: "Fruit drop was killing my yield every monsoon. The spray schedule they gave me cut it down to almost nothing.", name: "Shivaprasad Hegde", district: "Shivamogga", crop: "Arecanut", acres: "6" },
   // 3 banana

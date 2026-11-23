@@ -37,7 +37,7 @@ const travelEn = "Travel and accommodation charged separately.";
 const en: ConsultancyContent = {
   title: "Agriculture Consultant, Karnataka | Horti Guru",
   description:
-    "Horticulture consultancy in Karnataka: ₹250 calls, irrigation and nutrient scheduling, ₹5,000 field visits by an agronomist and ₹10,000 crop planning reports.",
+    "Horticulture consultancy in Karnataka: ₹250 calls, irrigation and nutrient scheduling, case-specific expert field visits and ₹10,000 crop planning reports.",
   crumb: "Consultancy",
   h1: "Horticulture consultancy and field visits",
   sub: "Pay for exactly what you need, from a five-minute call to a full crop plan.",
@@ -79,7 +79,7 @@ const en: ConsultancyContent = {
     {
       id: "visit",
       name: "Field visit",
-      unit: "per visit",
+      unit: "",
       line: "An expert walks your field with you.",
       note: travelEn,
       detail: [
@@ -139,7 +139,7 @@ const en: ConsultancyContent = {
     "A nutrient schedule does the same for fertilizer. Starting from a soil test, it sets the basal dose and each top dressing through the season, including organic manures, bio fertilizers and micronutrients where they are needed. Growers are often surprised by what they can stop applying. The schedule is specific to one crop on one plot, which is why it is priced per crop.",
     "## Field visits",
     "Some problems cannot be solved from a photograph. Patchy growth across a field, drainage that fails in heavy rain, a disease that keeps returning in the same corner: these need someone to walk the plot. During a field visit the expert looks at the crop, the soil profile, drainage and the history of the field with you, and you receive written recommendations afterwards.",
-    "The visit fee is ₹5,000. Travel and accommodation are charged separately at actual cost, because farms are spread across Karnataka and the cost of reaching them varies widely. We agree that cost with you before confirming the visit.",
+    "Field-visit charges are set case by case. Contact us with your crop, location and problem for details. Travel and accommodation, when required, are agreed before the visit is confirmed.",
     "## Planning before you commit",
     "A crop planning report is for decisions that tie up capital: planting ginger on newly leased land, converting a plot to banana under drip, or establishing a new arecanut and pepper garden. The report looks at whether the crop suits your land, water and market, and builds a full cost budget from land preparation to harvest. It gives you a clear picture before you borrow or commit.",
     "## Beyond the farm gate",
@@ -154,7 +154,7 @@ const travelKn = "ಪ್ರಯಾಣ ಮತ್ತು ವಸತಿ ವೆಚ್�
 const kn: ConsultancyContent = {
   title: "ಕರ್ನಾಟಕದಲ್ಲಿ ಕೃಷಿ ಸಲಹೆಗಾರರು, ₹250 ರಿಂದ | Horti Guru",
   description:
-    "ಕರ್ನಾಟಕದಲ್ಲಿ ತೋಟಗಾರಿಕೆ ಸಮಾಲೋಚನೆ: ₹250 ಕರೆಗಳು, ನೀರಾವರಿ ಮತ್ತು ಪೋಷಕಾಂಶ ವೇಳಾಪಟ್ಟಿ, ₹5,000 ಹೊಲ ಭೇಟಿ ಮತ್ತು ₹10,000 ಬೆಳೆ ಯೋಜನಾ ವರದಿ.",
+    "ಕರ್ನಾಟಕದಲ್ಲಿ ತೋಟಗಾರಿಕೆ ಸಮಾಲೋಚನೆ: ₹250 ಕರೆಗಳು, ನೀರಾವರಿ ಮತ್ತು ಪೋಷಕಾಂಶ ವೇಳಾಪಟ್ಟಿ, ಪ್ರಕರಣಕ್ಕೆ ಅನುಗುಣವಾದ ತಜ್ಞರ ಹೊಲ ಭೇಟಿ ಮತ್ತು ₹10,000 ಬೆಳೆ ಯೋಜನಾ ವರದಿ.",
   crumb: "ಸಮಾಲೋಚನೆ",
   h1: "ತೋಟಗಾರಿಕೆ ಸಮಾಲೋಚನೆ ಮತ್ತು ಹೊಲ ಭೇಟಿ",
   sub: "ಐದು ನಿಮಿಷದ ಕರೆಯಿಂದ ಪೂರ್ಣ ಬೆಳೆ ಯೋಜನೆಯವರೆಗೆ, ನಿಮಗೆ ಬೇಕಾದುದಕ್ಕೆ ಮಾತ್ರ ಪಾವತಿಸಿ.",
@@ -196,7 +196,7 @@ const kn: ConsultancyContent = {
     {
       id: "visit",
       name: "ಹೊಲ ಭೇಟಿ",
-      unit: "ಪ್ರತಿ ಭೇಟಿಗೆ",
+      unit: "",
       line: "ತಜ್ಞರು ನಿಮ್ಮೊಂದಿಗೆ ನಿಮ್ಮ ಹೊಲದಲ್ಲಿ ನಡೆಯುತ್ತಾರೆ.",
       note: travelKn,
       detail: [
@@ -256,7 +256,7 @@ const kn: ConsultancyContent = {
     "ಪೋಷಕಾಂಶ ವೇಳಾಪಟ್ಟಿ ಗೊಬ್ಬರಕ್ಕೆ ಇದನ್ನೇ ಮಾಡುತ್ತದೆ. ಮಣ್ಣು ಪರೀಕ್ಷೆಯಿಂದ ಆರಂಭಿಸಿ, ತಳಗೊಬ್ಬರ ಮತ್ತು ಹಂಗಾಮಿನ ಪ್ರತಿ ಮೇಲುಗೊಬ್ಬರವನ್ನು ನಿಗದಿಪಡಿಸುತ್ತದೆ, ಅಗತ್ಯವಿದ್ದಲ್ಲಿ ಸಾವಯವ ಗೊಬ್ಬರ, ಜೈವಿಕ ಗೊಬ್ಬರ ಮತ್ತು ಲಘು ಪೋಷಕಾಂಶಗಳೂ ಸೇರಿ. ಏನನ್ನು ಹಾಕುವುದನ್ನು ನಿಲ್ಲಿಸಬಹುದು ಎಂದು ತಿಳಿದು ಬೆಳೆಗಾರರು ಅಚ್ಚರಿಪಡುವುದು ಸಾಮಾನ್ಯ. ವೇಳಾಪಟ್ಟಿ ಒಂದು ಜಮೀನಿನ ಒಂದು ಬೆಳೆಗೆ ನಿರ್ದಿಷ್ಟ, ಆದ್ದರಿಂದ ಬೆಲೆ ಪ್ರತಿ ಬೆಳೆಗೆ.",
     "## ಹೊಲ ಭೇಟಿ",
     "ಕೆಲವು ಸಮಸ್ಯೆಗಳನ್ನು ಫೋಟೋದಿಂದ ಬಗೆಹರಿಸಲಾಗುವುದಿಲ್ಲ. ಹೊಲದುದ್ದಕ್ಕೂ ಅಸಮ ಬೆಳವಣಿಗೆ, ಭಾರಿ ಮಳೆಯಲ್ಲಿ ವಿಫಲವಾಗುವ ಬಸಿಗಾಲುವೆ, ಅದೇ ಮೂಲೆಯಲ್ಲಿ ಮತ್ತೆ ಮತ್ತೆ ಬರುವ ರೋಗ: ಇವುಗಳಿಗೆ ಯಾರಾದರೂ ಹೊಲದಲ್ಲಿ ನಡೆಯಬೇಕು. ಹೊಲ ಭೇಟಿಯಲ್ಲಿ ತಜ್ಞರು ನಿಮ್ಮೊಂದಿಗೆ ಬೆಳೆ, ಮಣ್ಣಿನ ಪದರ, ಬಸಿಗಾಲುವೆ ಮತ್ತು ಹೊಲದ ಇತಿಹಾಸವನ್ನು ನೋಡುತ್ತಾರೆ, ಮತ್ತು ನಂತರ ಲಿಖಿತ ಶಿಫಾರಸುಗಳು ಸಿಗುತ್ತವೆ.",
-    "ಭೇಟಿ ಶುಲ್ಕ ₹5,000. ಜಮೀನುಗಳು ಕರ್ನಾಟಕದಾದ್ಯಂತ ಹರಡಿರುವುದರಿಂದ ಮತ್ತು ತಲುಪುವ ವೆಚ್ಚ ತುಂಬಾ ಬದಲಾಗುವುದರಿಂದ, ಪ್ರಯಾಣ ಮತ್ತು ವಸತಿಯನ್ನು ನಿಜವಾದ ವೆಚ್ಚದಲ್ಲಿ ಪ್ರತ್ಯೇಕವಾಗಿ ವಿಧಿಸಲಾಗುತ್ತದೆ. ಭೇಟಿ ದೃಢೀಕರಿಸುವ ಮುನ್ನ ಆ ವೆಚ್ಚವನ್ನು ನಿಮ್ಮೊಂದಿಗೆ ಒಪ್ಪಿಕೊಳ್ಳುತ್ತೇವೆ.",
+    "ಹೊಲ ಭೇಟಿಯ ಶುಲ್ಕವನ್ನು ಪ್ರಕರಣಕ್ಕೆ ಅನುಗುಣವಾಗಿ ನಿಗದಿಪಡಿಸಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಬೆಳೆ, ಸ್ಥಳ ಮತ್ತು ಸಮಸ್ಯೆಯ ವಿವರಗಳೊಂದಿಗೆ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ಅಗತ್ಯವಿರುವ ಪ್ರಯಾಣ ಮತ್ತು ವಸತಿ ವೆಚ್ಚವನ್ನು ಭೇಟಿ ದೃಢೀಕರಿಸುವ ಮುನ್ನ ಒಪ್ಪಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.",
     "## ಬದ್ಧರಾಗುವ ಮುನ್ನ ಯೋಜನೆ",
     "ಬೆಳೆ ಯೋಜನಾ ವರದಿ ಬಂಡವಾಳ ತೊಡಗಿಸುವ ನಿರ್ಧಾರಗಳಿಗೆ: ಹೊಸದಾಗಿ ಗುತ್ತಿಗೆ ಪಡೆದ ಜಮೀನಿನಲ್ಲಿ ಶುಂಠಿ, ಜಮೀನನ್ನು ಹನಿ ನೀರಾವರಿಯ ಬಾಳೆಗೆ ಬದಲಿಸುವುದು, ಅಥವಾ ಹೊಸ ಅಡಿಕೆ ಮತ್ತು ಕಾಳುಮೆಣಸಿನ ತೋಟ. ಬೆಳೆ ನಿಮ್ಮ ಭೂಮಿ, ನೀರು ಮತ್ತು ಮಾರುಕಟ್ಟೆಗೆ ಹೊಂದುತ್ತದೆಯೇ ಎಂದು ನೋಡಿ, ಭೂಮಿ ಸಿದ್ಧತೆಯಿಂದ ಕೊಯ್ಲಿನವರೆಗೆ ಪೂರ್ಣ ವೆಚ್ಚದ ಅಂದಾಜು ರೂಪಿಸುತ್ತದೆ. ಸಾಲ ಮಾಡುವ ಅಥವಾ ಬದ್ಧರಾಗುವ ಮುನ್ನ ಸ್ಪಷ್ಟ ಚಿತ್ರಣ ನೀಡುತ್ತದೆ.",
     "## ಹೊಲದ ಗೇಟಿನಾಚೆ",
@@ -271,7 +271,7 @@ const travelHi = "यात्रा और ठहरने का ख़र्�
 const hi: ConsultancyContent = {
   title: "कर्नाटक में कृषि सलाहकार, ₹250 से | Horti Guru",
   description:
-    "कर्नाटक में बागवानी परामर्श: ₹250 की कॉल, सिंचाई और पोषण शेड्यूल, कृषि विशेषज्ञ का ₹5,000 का खेत दौरा और ₹10,000 की फ़सल योजना रिपोर्ट।",
+    "कर्नाटक में बागवानी परामर्श: ₹250 की कॉल, सिंचाई और पोषण शेड्यूल, मामले के अनुसार विशेषज्ञ का खेत दौरा और ₹10,000 की फ़सल योजना रिपोर्ट।",
   crumb: "परामर्श",
   h1: "बागवानी परामर्श और खेत का दौरा",
   sub: "पाँच मिनट की कॉल से पूरी फ़सल योजना तक, सिर्फ़ उतना भुगतान करें जितना चाहिए।",
@@ -313,7 +313,7 @@ const hi: ConsultancyContent = {
     {
       id: "visit",
       name: "खेत का दौरा",
-      unit: "प्रति दौरा",
+      unit: "",
       line: "विशेषज्ञ आपके साथ आपका खेत देखते हैं।",
       note: travelHi,
       detail: [
@@ -373,7 +373,7 @@ const hi: ConsultancyContent = {
     "पोषण शेड्यूल यही काम खाद के लिए करता है। मिट्टी जाँच से शुरू करके यह आधार खाद और सीज़न की हर टॉप ड्रेसिंग तय करता है, ज़रूरत हो तो जैविक खाद, जैव उर्वरक और सूक्ष्म पोषक तत्व भी। उत्पादक अक्सर यह जानकर हैरान होते हैं कि वे क्या डालना बंद कर सकते हैं। शेड्यूल एक खेत की एक फ़सल के लिए होता है, इसीलिए कीमत प्रति फ़सल है।",
     "## खेत का दौरा",
     "कुछ समस्याएँ फ़ोटो से हल नहीं होतीं। पूरे खेत में असमान बढ़वार, भारी बारिश में फ़ेल होती जल निकासी, एक ही कोने में बार-बार लौटता रोग: इनके लिए किसी को खेत में चलना पड़ता है। दौरे में विशेषज्ञ आपके साथ फ़सल, मिट्टी की परतें, जल निकासी और खेत का इतिहास देखते हैं, और बाद में लिखित सिफ़ारिशें मिलती हैं।",
-    "दौरे की फ़ीस ₹5,000 है। यात्रा और ठहरने का ख़र्च वास्तविक लागत पर अलग से लिया जाता है, क्योंकि खेत पूरे कर्नाटक में फैले हैं और वहाँ पहुँचने का ख़र्च बहुत अलग होता है। दौरा पक्का करने से पहले हम यह ख़र्च आपसे तय करते हैं।",
+    "खेत के दौरे की फ़ीस मामले के अनुसार तय होती है। अपनी फ़सल, जगह और समस्या के विवरण के साथ हमसे संपर्क करें। ज़रूरत होने पर यात्रा और ठहरने का ख़र्च दौरा पक्का करने से पहले तय किया जाता है।",
     "## पैसा लगाने से पहले योजना",
     "फ़सल योजना रिपोर्ट उन फ़ैसलों के लिए है जिनमें पूँजी फँसती है: नई पट्टे की ज़मीन पर अदरक, किसी खेत को ड्रिप वाले केले में बदलना, या नया सुपारी और काली मिर्च का बाग़। रिपोर्ट देखती है कि फ़सल आपकी ज़मीन, पानी और बाज़ार के लिए ठीक है या नहीं, और भूमि की तैयारी से खुदाई तक पूरे ख़र्च का बजट बनाती है। कर्ज़ लेने या पैसा लगाने से पहले आपको साफ़ तस्वीर मिलती है।",
     "## खेत के आगे",

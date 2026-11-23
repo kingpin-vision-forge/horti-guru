@@ -41,7 +41,7 @@ const en: AdvisoryContent = {
   crumb: "Advisory",
   h1: "Season-long horticulture advisory",
   sub: "One expert who knows your field, for the full crop cycle.",
-  anchor: "A single field visit costs ₹5,000.",
+  anchor: "Expert field visits are charged case by case. Contact us for details.",
   packageName: "WhatsApp advisory",
   terms: ["One complete crop cycle", "or one year", "per acre"],
   unit: "per acre, per year",
@@ -136,7 +136,7 @@ const en: AdvisoryContent = {
     },
     {
       q: "Are field visits included?",
-      a: "No. Advisory is delivered over WhatsApp. If a problem needs someone in your field, a visit can be booked for ₹5,000, with travel and accommodation charged separately.",
+      a: "No. Advisory is delivered over WhatsApp. Expert field visits can be arranged when needed; case-specific charges apply. Contact us for details.",
     },
     {
       q: "How do I pay?",
@@ -174,7 +174,7 @@ const kn: AdvisoryContent = {
   crumb: "ಸಲಹೆ",
   h1: "ಇಡೀ ಹಂಗಾಮಿನ ತೋಟಗಾರಿಕೆ ಸಲಹೆ",
   sub: "ಇಡೀ ಬೆಳೆ ಚಕ್ರಕ್ಕೆ, ನಿಮ್ಮ ಹೊಲವನ್ನು ಬಲ್ಲ ಒಬ್ಬ ತಜ್ಞರು.",
-  anchor: "ಒಂದು ಹೊಲ ಭೇಟಿಗೆ ₹5,000.",
+  anchor: "ತಜ್ಞರ ಹೊಲ ಭೇಟಿಗೆ ಪ್ರಕರಣಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಶುಲ್ಕ ಅನ್ವಯಿಸುತ್ತದೆ. ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗೆ ಸಂಪರ್ಕಿಸಿ.",
   packageName: "ವಾಟ್ಸಾಪ್ ಸಲಹೆ",
   terms: ["ಒಂದು ಪೂರ್ಣ ಬೆಳೆ ಚಕ್ರ", "ಅಥವಾ ಒಂದು ವರ್ಷ", "ಪ್ರತಿ ಎಕರೆಗೆ"],
   unit: "ಪ್ರತಿ ಎಕರೆಗೆ, ಪ್ರತಿ ವರ್ಷಕ್ಕೆ",
@@ -269,7 +269,7 @@ const kn: AdvisoryContent = {
     },
     {
       q: "ಹೊಲ ಭೇಟಿ ಸೇರಿದೆಯೇ?",
-      a: "ಇಲ್ಲ. ಸಲಹೆ ವಾಟ್ಸಾಪ್ ಮೂಲಕ ನಡೆಯುತ್ತದೆ. ಸಮಸ್ಯೆಗೆ ಹೊಲಕ್ಕೇ ಬರಬೇಕಾದರೆ ₹5,000 ಕ್ಕೆ ಭೇಟಿ ಕಾಯ್ದಿರಿಸಬಹುದು; ಪ್ರಯಾಣ ಮತ್ತು ವಸತಿ ವೆಚ್ಚ ಪ್ರತ್ಯೇಕ.",
+      a: "ಇಲ್ಲ. ಸಲಹೆ ವಾಟ್ಸಾಪ್ ಮೂಲಕ ನಡೆಯುತ್ತದೆ. ಅಗತ್ಯವಿದ್ದರೆ ತಜ್ಞರ ಹೊಲ ಭೇಟಿ ಏರ್ಪಡಿಸಬಹುದು; ಪ್ರಕರಣಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಶುಲ್ಕ ಅನ್ವಯಿಸುತ್ತದೆ. ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗೆ ಸಂಪರ್ಕಿಸಿ.",
     },
     {
       q: "ಪಾವತಿ ಹೇಗೆ ಮಾಡಬೇಕು?",
@@ -307,7 +307,7 @@ const hi: AdvisoryContent = {
   crumb: "सलाह",
   h1: "पूरे सीज़न की बागवानी सलाह",
   sub: "पूरे फ़सल चक्र के लिए, एक विशेषज्ञ जो आपके खेत को जानता है।",
-  anchor: "खेत का एक दौरा ₹5,000 का है।",
+  anchor: "विशेषज्ञ के खेत दौरे का शुल्क मामले के अनुसार तय होता है। अधिक जानकारी के लिए संपर्क करें।",
   packageName: "व्हाट्सऐप सलाह",
   terms: ["एक पूरा फ़सल चक्र", "या एक साल", "प्रति एकड़"],
   unit: "प्रति एकड़, प्रति वर्ष",
@@ -402,7 +402,7 @@ const hi: AdvisoryContent = {
     },
     {
       q: "क्या खेत का दौरा शामिल है?",
-      a: "नहीं। सलाह व्हाट्सऐप पर दी जाती है। अगर समस्या के लिए किसी को खेत पर आना ज़रूरी हो, तो ₹5,000 में दौरा बुक किया जा सकता है; यात्रा और ठहरने का ख़र्च अलग।",
+      a: "नहीं। सलाह व्हाट्सऐप पर दी जाती है। ज़रूरत होने पर विशेषज्ञ का खेत दौरा तय किया जा सकता है; शुल्क मामले के अनुसार होगा। अधिक जानकारी के लिए संपर्क करें।",
     },
     {
       q: "भुगतान कैसे करूँ?",

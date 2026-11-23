@@ -17,7 +17,7 @@ export default function OpengraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1.5, maxWidth: 960 }}>
-            Season-long crop advice for ginger, turmeric, arecanut, banana and pepper growers
+            Season-long crop advisory for ginger, turmeric, arecanut, banana and pepper growers
           </div>
           <div style={{ display: "flex", gap: 6, marginTop: 48 }}>
             {segments.map((m, i) => (

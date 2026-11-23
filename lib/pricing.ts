@@ -29,7 +29,7 @@ export const prices: Record<ServiceId, number | null> = {
   call: 250,
   irrigation: 1500,
   nutrient: 2500,
-  visit: 5000,
+  visit: null,
   planning: 10000,
   handholding: null,
   "water-sample": 250,
