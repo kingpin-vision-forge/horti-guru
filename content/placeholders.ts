@@ -3,7 +3,7 @@
  * everywhere. See content/placeholders.md for what each one needs.
  * While a value still starts with "[", the site treats it as unfilled.
  *
- * MOCK VALUES FOR CLIENT REVIEW. The phone, WhatsApp, email, UPI ID, address,
+ * MOCK VALUES FOR CLIENT REVIEW. The UPI ID and QR are real. The phone, WhatsApp, email, address,
  * testimonials and team below are invented. Replace all of them with real
  * details before launch.
  */
@@ -15,8 +15,8 @@ export const P = {
   PHONE: "+91 91640 49808",
   WHATSAPP: "+91 91640 49808",
   EMAIL: "hello@hortiguru.in",
-  UPI_ID: "mock.hortiguru@ybl",
-  UPI_QR: "/img/upi-qr-sample.svg",
+  UPI_ID: "8618599158@ybl",
+  UPI_QR: "/img/upi-qr.png",
 
   ADDRESS_STREET: "#14, 2nd Cross, Vinoba Nagar",
   ADDRESS_CITY: "Shivamogga",

@@ -18,8 +18,8 @@ off again, put its `[TOKEN]` back.
 | `PHONE` | `+91 90000 12345` | Main phone number with country code. |
 | `WHATSAPP` | `+91 90000 12345` | WhatsApp business number with country code. **Every form and the checkout hand off here; nothing is sent anywhere else.** |
 | `EMAIL` | `hello@hortiguru.in` | Public email address. |
-| `UPI_ID` | `mock.hortiguru@ybl` | UPI ID payments go to. Enables the Google Pay, PhonePe and UPI buttons in checkout. |
-| `UPI_QR` | `/img/upi-qr-sample.svg` | Path to the real UPI QR image in `public/img/`. The sample is decorative and **cannot be scanned**. |
+| `UPI_ID` | `8618599158@ybl` (real, PhonePe, SASHA HARISH) | UPI ID payments go to. Enables the Google Pay, PhonePe and UPI buttons in checkout. |
+| `UPI_QR` | `/img/upi-qr.png` (real, scannable) | Path to the real UPI QR image in `public/img/`. Must encode the same UPI ID as `UPI_ID`. |
 | `ADDRESS_STREET` `ADDRESS_CITY` `ADDRESS_PIN` | #14, 2nd Cross, Vinoba Nagar, Shivamogga 577204 | Full office address. Filling the street also turns on the map. |
 | `HOURS` | Mon–Sat, 9:00 am – 6:00 pm | Opening hours, stated honestly. |
 | `CONFIRMATION_WINDOW` | 4 working hours | How quickly a UPI payment is confirmed. |

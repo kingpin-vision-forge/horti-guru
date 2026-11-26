@@ -46,6 +46,7 @@ export default async function CropPage({ params }: Props) {
   const { lang, crop } = await params;
   if (!isCrop(crop)) notFound();
   const id: CropId = crop;
+  const secondPhoto = id === "arecanut" ? images.arecanutSecond : id === "banana" ? images.bananaSecond : undefined;
   const data = cropData[id];
   const c = data.copy[lang];
   const t = getDictionary(lang);
@@ -96,13 +97,34 @@ export default async function CropPage({ params }: Props) {
               </p>
             </PageHeader>
           </div>
-          <Photo
+          {secondPhoto ? (
+            <div className="mb-10 grid grid-cols-2 items-start gap-2 lg:mb-0 lg:self-center">
+              {[images[id], secondPhoto].map((photo, index) => (
+                <Photo
+                  key={photo.token}
+                  photo={photo}
+                  lang={lang}
+                  priority={index === 0}
+                  sizes="(min-width: 1024px) 210px, 50vw"
+                  className="aspect-[9/20] rounded-md"
+                />
+              ))}
+            </div>
+          ) : id === "turmeric" ? (
+            <Photo
+              photo={images[id]}
+              lang={lang}
+              priority
+              sizes="(min-width: 1024px) 420px, 100vw"
+              className="mb-10 aspect-[20/9] rounded-md lg:mb-0 lg:self-center"
+            />
+          ) : <Photo
             photo={images[id]}
             lang={lang}
             priority
             sizes="(min-width: 1024px) 420px, 100vw"
             className="mb-10 aspect-[4/3] rounded-md lg:mb-0 lg:aspect-auto lg:h-full lg:rounded-none"
-          />
+          />}
         </div>
       </div>
 
