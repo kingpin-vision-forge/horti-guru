@@ -21,14 +21,13 @@ const unsplash = (id: string, ar: string) => `https://images.unsplash.com/${id}?
 export const images = {
   hero: {
     token: "IMG_HERO",
-    src: unsplash("photo-1707721690746-cdbdabadebc2", "2:3"),
-    source: "https://unsplash.com/photos/5mFozuUv3A0",
-    width: 800,
+    src: "/img/ginger-field.webp",
+    width: 900,
     height: 1200,
     alt: {
-      en: "A grower standing in her crop field in India",
-      kn: "ಭಾರತದಲ್ಲಿ ತನ್ನ ಬೆಳೆ ಹೊಲದಲ್ಲಿ ನಿಂತಿರುವ ಬೆಳೆಗಾರ್ತಿ",
-      hi: "भारत में अपने फ़सल के खेत में खड़ी एक उत्पादक",
+      en: "Healthy ginger rows growing under sprinkler irrigation",
+      kn: "ತುಂತುರು ನೀರಾವರಿಯಲ್ಲಿ ಬೆಳೆಯುತ್ತಿರುವ ಆರೋಗ್ಯಕರ ಶುಂಠಿ ಸಾಲುಗಳು",
+      hi: "स्प्रिंकलर सिंचाई में उगती स्वस्थ अदरक की कतारें",
     },
   },
   ginger: {

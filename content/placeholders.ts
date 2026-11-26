@@ -12,8 +12,8 @@ export const P = {
   METRIC_GROWERS: "850+",
   METRIC_YEARS: "12",
 
-  PHONE: "+91 90000 12345",
-  WHATSAPP: "+91 90000 12345",
+  PHONE: "+91 91640 49808",
+  WHATSAPP: "+91 91640 49808",
   EMAIL: "hello@hortiguru.in",
   UPI_ID: "mock.hortiguru@ybl",
   UPI_QR: "/img/upi-qr-sample.svg",
