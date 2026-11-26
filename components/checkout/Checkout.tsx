@@ -126,6 +126,21 @@ export function Checkout({ t, services, crops, upiId, upiReady, qrSrc, whatsappR
     [upiId, total, s.ref],
   );
 
+  // A per-order QR carries the amount and reference, so scanning it needs no typing.
+  // Until it is drawn (or if drawing fails) the static QR stands in.
+  const [orderQr, setOrderQr] = useState<string | null>(null);
+  useEffect(() => {
+    if (!upiReady || s.step !== 2 || !s.ref) return;
+    let live = true;
+    import("qrcode")
+      .then((QR) => QR.toDataURL(`upi://pay?${upiParams}`, { errorCorrectionLevel: "M", margin: 2, width: 480 }))
+      .then((url) => live && setOrderQr(url))
+      .catch(() => live && setOrderQr(null));
+    return () => {
+      live = false;
+    };
+  }, [upiReady, upiParams, s.step, s.ref]);
+
   const validateDetails = () => {
     const e: Record<string, string> = {};
     if (!s.name.trim()) e.name = t.required;
@@ -335,9 +350,9 @@ export function Checkout({ t, services, crops, upiId, upiReady, qrSrc, whatsappR
 
               <div className="mx-auto mt-8 w-full max-w-[16rem]">
                 <div className="aspect-square w-full rounded-lg border border-line bg-white p-3">
-                  {qrSrc ? (
+                  {orderQr || qrSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={qrSrc} alt={`${t.scan}: ${upiId}`} width={480} height={480} className="h-full w-full object-contain" />
+                    <img src={(orderQr ?? qrSrc)!} alt={`${t.scan}: ${upiId}`} width={480} height={480} className="h-full w-full object-contain" />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-mist text-sm text-slate">[UPI_QR]</div>
                   )}
